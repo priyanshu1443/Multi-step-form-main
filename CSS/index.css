@@ -1,0 +1,717 @@
+:root {
+	--Marineblue: hsl(213, 96%, 18%);
+	--Purplishblue: hsl(243, 100%, 62%);
+	--Pastelblue: hsl(228, 100%, 84%);
+	--Lightblue: hsl(206, 94%, 87%);
+	--Strawberryred: hsl(354, 84%, 57%);
+	--Coolgray: hsl(231, 11%, 63%);
+	--Lightgray: hsl(229, 24%, 87%);
+	--Magnolia: hsl(217, 100%, 97%);
+	--Alabaster: hsl(231, 100%, 99%);
+	--White: hsl(0, 0%, 100%);
+}
+
+
+
+#box1 {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100vw;
+	height: 100vh;
+	background-color: var(--Magnolia);
+}
+
+#box2 {
+	min-width: 250px;
+	width: 900px;
+	height: 500px;
+	background-color: var(--White);
+	border-radius: 15px;
+	padding: 20px;
+	display: flex;
+	gap: 50px;
+}
+
+
+
+/* --------- sidebar start ---------  */
+
+#sidebar {
+	width: 228px;
+	height: 100%;
+	border-radius: 15px;
+	overflow: hidden;
+	background: url(../assets/images/bg-sidebar-desktop.svg);
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+#sidebar #navigation {
+	width: 100%;
+	height: 100%;
+	padding: 20px;
+}
+
+#sidebar #navigation ul li {
+	list-style: none;
+	width: 200px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 20px;
+}
+
+#sidebar #navigation ul li .step_number {
+	border: 1.5px solid var(--Alabaster);
+	border-radius: 50%;
+	width: 35px;
+	height: 35px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: var(--Alabaster);
+	background-color: transparent;
+	text-transform: uppercase;
+}
+
+#sidebar #navigation ul li .active_form {
+	background-color: var(--Lightblue);
+	color: black;
+}
+
+#sidebar #navigation ul li #step {
+	width: 70%;
+}
+
+#sidebar #navigation ul li #step .step {
+	font-size: 12px;
+	color: var(--Coolgray);
+	font-weight: 400;
+	display: block;
+	text-transform: uppercase;
+	margin-bottom: 5px;
+}
+
+#sidebar #navigation ul li #step .step_name {
+	font-size: 14px;
+	color: var(--Alabaster);
+	font-weight: 400;
+	display: block;
+	text-transform: uppercase;
+}
+
+/* --------- sidebar end ---------  */
+
+/* ------------ main form ------------ */
+
+#main {
+	width: 550px;
+	padding: 30px 30px 0 30px;
+}
+
+/*  ------------ step 1 start -------------- */
+#step1 {
+	width: 100%;
+	height: 100%;
+	padding: 3px;
+}
+
+#step1 h1 {
+	color: var(--Marineblue);
+	margin-bottom: 10px;
+}
+
+#step1 p {
+	color: var(--Coolgray);
+	font-size: 16px;
+	margin-bottom: 25px;
+}
+
+#step1 form>div {
+	margin-bottom: 25px;
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+}
+
+#step1 form>div>div {
+	display: flex;
+	justify-content: space-between;
+}
+
+#step1 form label {
+	color: var(--Marineblue);
+	font-weight: 400;
+}
+
+#step1 form>div>div>span {
+	color: var(--Strawberryred);
+	font-weight: 700;
+	font-size: 15px;
+	display: none;
+}
+
+#step1 form input[type='text'],
+#step1 form input[type='email'] {
+	width: 100%;
+	height: 40px;
+	font-weight: 500;
+	font-size: 16px;
+	padding-left: 13px;
+	border-radius: 5px;
+	outline: none;
+	border: 1.6px solid var(--Coolgray);
+	color: var(--Marineblue);
+	cursor: pointer;
+}
+
+#step1 form input[type='text']:focus,
+#step1 form input[type='email']:focus {
+	border: 1.6px solid var(--Marineblue);
+	background-color: var(--White);
+	color: var(--Marineblue);
+	font-weight: 500;
+}
+
+#step1 #submit1 {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+	align-items: center;
+	position: relative;
+	top: 15px;
+}
+
+#gotostep2,
+#gotostep3,
+#gotostep4,
+#submitform,
+#submitformm {
+	color: var(--White);
+	background-color: var(--Marineblue);
+	width: 100px;
+	height: 40px;
+	outline: none;
+	border-radius: 8px;
+	font-weight: 400;
+	border-color: var(--Marineblue);
+	cursor: pointer;
+	box-shadow: none;
+}
+
+#step1 #gotostep2:hover,
+#gotostep3:hover,
+#gotostep4:hover {
+	background-color: var(--Lightblue);
+	border-color: var(--Lightblue);
+}
+
+/*  -------------- step 1 end --------------  */
+
+/*  --------------- step 2 start -------------  */
+
+#step2 {
+	display: none;
+	width: 100%;
+	height: 100%;
+	padding: 3px;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+#step2 section>h1 {
+	color: var(--Marineblue);
+	margin-bottom: 5px;
+}
+
+#step2 section>p {
+	color: var(--Coolgray);
+	margin-bottom: 25px;
+}
+
+#step2 section>#choice {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+#step2 section>#choice section {
+	border: 2px solid var(--Lightgray);
+	width: 135px;
+	height: 160px;
+	padding: 15px;
+	border-radius: 5px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	cursor: pointer;
+}
+
+#step2 section>#choice section:hover {
+	border-color: var(--Marineblue);
+}
+
+#step2 section>#choice section img {
+	width: 40px;
+	height: 40px;
+	align-self: baseline;
+}
+
+#step2 section>#choice section div p {
+	font-size: 16px;
+	font-weight: 500;
+	color: var(--Marineblue);
+}
+
+#step2 section>#choice section div span {
+	font-size: 14px;
+	font-weight: 400;
+	color: var(--Coolgray);
+	display: block;
+	margin-top: 5px;
+}
+
+#step2 section>#choice section div .yr {
+	font-size: 12px;
+	margin-top: 5px;
+	font-weight: 400;
+	display: none;
+}
+
+#step2 section>#choose_m_y {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: hsl(217, 100%, 97%);
+	margin-top: 44px;
+
+}
+
+#step2 section>#choose_m_y p {
+	font-size: 16px;
+	font-weight: 500;
+}
+
+#step2 section>#choose_m_y .monthly {
+	color: var(--Marineblue);
+}
+
+
+#step2 section>#choose_m_y span {
+	margin: 10px;
+	padding: 3px;
+	width: 40px;
+	background-color: var(--Marineblue);
+	border-radius: 10px;
+	height: 20px;
+	display: flex;
+	align-items: center;
+	flex-direction: row;
+}
+
+#step2 section>#choose_m_y span>div {
+	width: 15px;
+	height: 15px;
+	border-radius: 50%;
+	background-color: var(--White);
+}
+
+#step2 section>#choose_m_y .yearly {
+	color: var(--Coolgray);
+}
+
+#step2 #f2buttons {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	position: relative;
+	bottom: 5px;
+}
+
+#step2 #f2buttons p,
+#step3 #step3buttons p {
+	font-size: 16px;
+	color: var(--Coolgray);
+	font-weight: 500;
+	cursor: pointer;
+}
+
+#step2 #f2buttons p:hover,
+#step3 #step3buttons p:hover {
+	color: var(--Marineblue);
+}
+
+/*  --------- step 2 end --------------- */
+
+/*  ---------------- step 3 start ---------------------- */
+
+#step3 {
+	display: none;
+	height: 100%;
+	padding: 3px;
+}
+
+#step3 h1 {
+	color: var(--Marineblue);
+	font-weight: 700;
+}
+
+#step3>p {
+	color: var(--Coolgray);
+	font-size: 16px;
+	font-weight: 400;
+	margin-top: 5px;
+}
+
+#step3 section {
+	margin-top: 30px;
+	cursor: pointer;
+}
+
+#step3 section>div {
+	border: 1px solid var(--Coolgray);
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	width: 100%;
+	height: 65px;
+	margin-top: 15px;
+	border-radius: 10px;
+}
+
+.addons {
+	border-color: var(--Marineblue);
+}
+
+#step3 section>div input {
+	width: 10%;
+}
+
+#step3 section>div>div {
+	width: 60%;
+}
+
+#step3 section>div>div h4 {
+	color: var(--Marineblue);
+	font-weight: 700;
+}
+
+#step3 section>div>div p {
+	color: var(--Coolgray);
+	font-size: 14px;
+	margin-top: 3px;
+	font-weight: 400;
+}
+
+#step3 section>div>p {
+	width: 20%;
+	color: var(--Purplishblue);
+	font-size: 16px;
+}
+
+#step3 #step3buttons {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	position: relative;
+	top: 57px;
+}
+
+/* ----------------- step 3 end ----------------- */
+
+/* --------------- step 4 start ------------------ */
+
+#step4 {
+	display: none;
+	height: 100%;
+	padding: 3px;
+}
+
+#step4 h1 {
+	color: var(--Marineblue);
+}
+
+#step4>p {
+	color: var(--Coolgray);
+	font-size: 16px;
+	margin-top: 5px;
+}
+
+#step4 section {
+	width: 100%;
+	padding: 10px;
+	margin-top: 20px;
+}
+
+#step4 section>div>div {
+	background-color: var(--Magnolia);
+	padding-bottom: 7px;
+}
+
+#step4 section .summary {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+}
+
+#step4 section .summary>div {
+	width: 45%;
+	margin: 20px 0;
+}
+
+#step4 section .summary h4 {
+	color: var(--Marineblue);
+}
+
+#step4 section .summary>h4 {
+	width: 45%;
+	text-align: end;
+}
+
+#step4 section .summary a {
+	color: var(--Coolgray);
+	font-size: 14px;
+}
+
+#step4 section .summary a:hover {
+	color: hsl(259, 80%, 63%);
+}
+
+#step4 section .summary a:active {
+	color: var(--Coolgray);
+}
+
+#step4 section .summary a:visited {
+	color: var(--Coolgray);
+}
+
+#step4 section hr {
+	margin: 0 20px;
+}
+
+#step4 section .summary p {
+	width: 45%;
+	margin: 8px 0;
+	color: var(--Coolgray);
+	font-size: 14px;
+	font-weight: 400;
+}
+
+#step4 section .summary #service1price,
+#step4 section .summary #service2price,
+#step4 section .summary #service3price {
+	text-align: end;
+	color: var(--Marineblue);
+	font-weight: 500;
+}
+
+#step4 section .total {
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+	background-color: white;
+	margin-top: 20px;
+}
+
+#step4 section .total p {
+	width: 45%;
+	font-size: 16px;
+	color: var(--Coolgray);
+}
+
+#step4 section .total h3 {
+	width: 45%;
+	text-align: end;
+	color: var(--Purplishblue);
+}
+
+#step4 #step4buttons {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	position: relative;
+	top: 138px;
+}
+
+#step4 .step4buttons {
+	display: none;
+	align-items: center;
+	justify-content: space-between;
+}
+
+#step4 #step4buttons p,
+#step4 .step4buttons p {
+	color: var(--Coolgray);
+	font-size: 16px;
+	cursor: pointer;
+}
+
+#submitform,
+#submitformm {
+	background-color: var(--Purplishblue);
+	border-color: var(--Purplishblue);
+}
+
+#submitform:hover,
+#submitformm:hover {
+	background-color: hsl(259, 80%, 63%);
+	border-color: hsl(259, 80%, 63%);
+}
+
+#none {
+	display: none;
+}
+
+/*  ------------------ step 4 end ---------------- */
+
+/* ------------ thank you start --------------------- */
+
+#thankyou {
+	display: none;
+	width: 100%;
+	height: 100%;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+#thankyou img {
+	margin-bottom: 30px;
+}
+
+#thankyou h1 {
+	color: var(--Marineblue);
+	margin-bottom: 20px;
+}
+
+#thankyou p {
+	width: 90%;
+	color: var(--Coolgray);
+	text-align: center;
+}
+
+/* ------------------ thank you end ------------------ */
+
+/* ---------------- main content end --------------------------- */
+
+/*-------------- responsive----------------- */
+@media (max-width: 900px) {
+	body {
+		background-color: var(--Magnolia);
+	}
+
+	#box1 {
+		display: block;
+	}
+
+	#box2 {
+		display: block;
+		border-radius: none;
+		padding: 0;
+		background-color: var(--Magnolia);
+		width: 100%;
+	}
+
+
+	#sidebar {
+		width: 100vw;
+		height: 200px;
+		border-radius: 0;
+		background: url(../assets/images/bg-sidebar-mobile.svg);
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+	}
+
+	#sidebar #navigation ul {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+		height: 50%;
+	}
+
+	#sidebar #navigation ul li {
+		width: 50px;
+	}
+
+	#sidebar #navigation ul li #step {
+		display: none;
+	}
+
+
+	#main {
+		position: relative;
+		bottom: 75px;
+		width: 80vw;
+		margin: 0 10vw 0 10vw;
+		background-color: var(--Alabaster);
+	}
+
+
+	#step4 #step4buttons {
+		display: none;
+	}
+
+	#step4 .step4buttons {
+		display: flex;
+		z-index: 2;
+	}
+
+	#step1 #submit1,
+	#step2 #f2buttons,
+	#step3 #step3buttons,
+	#step4 .step4buttons {
+		position: fixed;
+		top: 88vh;
+		bottom: 0px;
+		right: 0px;
+		left: 0px;
+		background-color: var(--Alabaster);
+		padding: 0 10px;
+		width: 100vw;
+		height: 80px;
+	}
+
+	#choose_m_y {
+		margin-bottom: 10px;
+	}
+
+
+	#step2 section>#choice {
+		flex-direction: column;
+		gap: 10px;
+	}
+
+	#step2 section>#choice section {
+		flex-direction: row;
+		width: 100%;
+		height: 70px;
+	}
+
+	#step2 section>#choice section div {
+		width: 90%;
+		margin-left: 20px;
+	}
+
+	#step3 section {
+		margin-bottom: 10px;
+	}
+
+	.attribution {
+		display: none;
+	}
+}
+
+@media (max-width: 450px) {
+	#main {
+		padding: 10px 10px 0 10px;
+		width: 90vw;
+		margin: 0 3vw 0 3vw;
+
+	}
+}
